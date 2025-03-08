@@ -1,0 +1,1 @@
+Suorita peli.py pelataksesi. Peli on tehty versiolla Python 3.12.
