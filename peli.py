@@ -158,7 +158,7 @@ def etene():
 
 def peli_ohi():
     print("Peli ohi!")
-    pisteet = 0
+    pisteet = Muuttujat.HP
     
     # Pisteiden lasku pelin hävittyä
     if Muuttujat.HP < 1:
@@ -171,7 +171,7 @@ def peli_ohi():
     
     # Pisteiden lasku pelin voitettua    
     if Muuttujat.HP > 0:
-        pisteet += Muuttujat.HP
+
         viimeinenKortti = poistoPakka[-1]
         
         if viimeinenKortti.maa == "hertta" and Muuttujat.HP == 20: 
@@ -212,8 +212,7 @@ def aloita_peli():
     # odotetaan komentoa (numero 1-5)
     while not Muuttujat.peliOhi:
         while nostoPakka.__len__() > 0:
-            while poyta.__len__() < 4:
-                if nostoPakka.__len__() > 0:
+            while poyta.__len__() < 4 and nostoPakka.__len__() > 0:
                     paljasta_kortti()
             
             while poyta.__len__() > 0:    
